@@ -1,0 +1,36 @@
+<h1>F.R.I.E.N.D.S </h1>
+
+<div class="container" style="margin-top: 5%;">
+
+    <table class="table" border="1">
+        <!-- <caption>Todo list</caption> -->
+        <thead>
+            <tr>
+                <!-- <th>Id</th> -->
+                <th>Name</th>
+                <th>Occupation</th>
+                <!-- <th>Picture</th> -->
+                <th colspan="2" style="align-content: center;">Actions</th>
+            </tr>
+        </thead>
+
+        <tbody>
+            <tr *ngFor="let person of persons">
+                <!-- <td>{{person.id}}</td> -->
+                <td>{{person.name}}</td>
+                <td>{{person.occupation}}</td>
+                <!-- <td>{{todo.targetDate | date}}</td> -->
+                <td><button (click)="onUpdate(person.id)" class="btn btn-warning">Update</button></td>
+                <td><button (click)="onDelete(person.id)" class="btn btn-danger">Delete</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+    <div>
+        <button (click)="savePerson()" class="btn btn-success">Create Todo</button>
+    </div>
+
+    <br>
+    <br>
+</div>
